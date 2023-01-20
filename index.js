@@ -64,7 +64,7 @@ app.post("/login", async (req, res) => {
 app.use(authenticate)
 
 
-app.listen(9001, async () => {
+app.listen(process.env.PORT, async () => {
     try {
         await connection
         console.log("Connected DB Sucessfully")
